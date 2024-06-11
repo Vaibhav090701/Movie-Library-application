@@ -15,12 +15,12 @@ const Navbar = () => {
   const handleLogout = () => {
     // Clear authentication state
     localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('user');
     sessionStorage.removeItem('isReloaded');
     // Update authentication status
     setIsAuthenticated(false);
     // Redirect to login page
     navigate('/');
+    window.location.reload();
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,3 +61,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
