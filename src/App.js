@@ -75,9 +75,7 @@ const App = () => {
 
                 <Routes>
                     <Route path='/list' element={
-                        <ProtectedRoute>
                             <ListCreater onCreateList={handleCreateList} />
-                        </ProtectedRoute>
                     } />
 
                     <Route path='/login' element={<Auth />} />
@@ -96,7 +94,6 @@ const App = () => {
                     } />
 
                     <Route path='/movies' element={
-                        <ProtectedRoute>
                             <>
                                 <MovieListHeading heading='Movies' searchValue={searchValue} setSearchValue={setSearchValue} lists={lists} />
                                 <MovieList movies={movies} lists={lists} onAddMovieToList={handleAddMovieToList} />
@@ -104,7 +101,6 @@ const App = () => {
                                     <MultipleLists />
                                 </div>
                             </>
-                        </ProtectedRoute>
                     } />
                 </Routes>
             </BrowserRouter>
@@ -113,3 +109,4 @@ const App = () => {
 };
 
 export default App;
+
