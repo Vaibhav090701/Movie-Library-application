@@ -1,0 +1,34 @@
+.movieListContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 25px;
+    justify-content: space-evenly;;  
+
+}
+.movieContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 280px;
+    box-shadow: 0 3px 10px 0 #aaa;
+    cursor: pointer;
+  
+}
+.coverImage{
+    object-fit: cover;
+    height: 362px;
+
+}
+.movieName{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 15px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+}
+

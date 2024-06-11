@@ -1,0 +1,118 @@
+.active {
+    color: yellow;
+    padding-bottom: 3px;
+    border-bottom: 1px solid yellow;
+  }
+  
+  nav {
+    height: auto;
+    width: 100%;
+    margin: 0, auto;
+    padding: 0.5rem, 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: black; /* Ensure the nav background is black */
+    z-index: 1000; /* Ensure the nav is above other elements */
+  }
+  
+  nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0, 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+    cursor: pointer; /* Add cursor pointer */
+  }
+  
+  nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem;
+  }
+  
+  @media (max-width: 770px) {
+    nav .menu {
+      display: flex;
+    }
+    nav {
+      height: 5rem;
+      flex-direction: column;
+      align-items: start;
+      opacity: 9;
+      background-color: black; /* Ensure the nav background is black */
+    }
+  
+    .navButtons {
+      border: 1px solid green;
+      width: 100%;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+      background-color: black; /* Ensure the ul background is black */
+    }
+  
+    nav ul.open {
+      display: flex;
+    }
+  
+    nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav ul li a {
+      margin: 0.2rem 0.5rem;
+    }
+  }
+  
+  .desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .desktopMenuListItem:hover,
+  .title:hover {
+    color: yellow;
+    padding-bottom: 3px;
+    border-bottom: 1px solid yellow;
+  }
+  
