@@ -43,7 +43,7 @@ const ListCreater = ({ onCreateList }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography variant='h5' className='text-center' mb={2}>
+          <Typography variant='h5' className='text-center text-black' mb={2}>
             Name
           </Typography>
 
