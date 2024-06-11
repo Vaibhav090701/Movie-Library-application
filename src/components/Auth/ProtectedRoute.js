@@ -36,19 +36,24 @@ const ProtectedRoute = ({ children }) => {
     const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
 
     useEffect(() => {
-        if (!isAuthenticated) {
+        // Check if the page has already been reloaded
+        const isReloaded = sessionStorage.getItem('isReloaded');
+
+        if (!isReloaded) {
+            sessionStorage.setItem('isReloaded', 'true');
+            window.location.reload();
+        } else if (!isAuthenticated) {
             navigate('/login');
+        } else {
+            navigate('/movies');
         }
     }, [isAuthenticated, navigate]);
 
-    // Return null or a loading indicator while checking authentication
-    if (!isAuthenticated) {
-        return null; // or a loading spinner if desired
-    }
-
-    // Only render children if authenticated
-    return children;
+    // Render null while checking authentication and handling navigation
+    return null; 
 };
 
 export default ProtectedRoute;
+
+
 
