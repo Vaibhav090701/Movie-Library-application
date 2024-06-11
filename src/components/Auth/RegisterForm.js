@@ -25,6 +25,7 @@ const RegisterForm = () => {
 
             console.log("registeration successful");
             localStorage.setItem('isAuthenticated', 'true');
+            localStorage.setItem('user',JSON.stringify(values));
             navigate("/protected");
         } 
 
@@ -96,3 +97,4 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
