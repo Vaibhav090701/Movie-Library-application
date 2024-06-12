@@ -26,6 +26,7 @@ const App = () => {
     const handleAddMovieToList = (listId, movie) => {
         const updatedLists = lists.map(list => {
             if (list.id === listId) {
+                window.location.reload();
                 return { ...list, movies: [...list.movies, movie] };
             }
             return list;
